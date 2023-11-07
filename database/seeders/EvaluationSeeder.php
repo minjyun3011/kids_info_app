@@ -15,6 +15,7 @@ class EvaluationSeeder extends Seeder
     {
         // 一件だけinsertする
         DB::table('evaluations')->insert([
+            'kid_name' => '中山功太',
             'category' => '集団行動',
             'title' => '着席する',
             'evaluation' => '◎',
@@ -27,6 +28,7 @@ class EvaluationSeeder extends Seeder
         # paramに配列を代入
         $param = [
             [
+                'kid_name' => '中山功太',
                 'category' => 'セルフコントロール',
                 'title' => '失敗の受け入れ',
                 'evaluation' => '✖︎',
@@ -36,6 +38,7 @@ class EvaluationSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s')
             ],
             [
+                'kid_name' => '中山功太',
                 'category' => '動作・運動',
                 'title' => '苦手なことへの克服',
                 'evaluation' => '△',

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('evaluations', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('kid_name');
             $table->string('category');
             $table->string('title');
             $table->char('evaluation');
