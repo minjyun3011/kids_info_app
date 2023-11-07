@@ -19,4 +19,21 @@ class EvaluationController extends Controller
         $eva = Evaluation::find($id);
         return view('evaluations.show', ['eva' => $eva]);
     }
+    public function create()
+    {
+        return view('evaluations.create');
+    }
+
+    public function store(Request $request)
+    {
+        $eva = new Evaluation;
+        $eva->kid_name = $request->kid_name;
+        $eva->category = $request->category;
+        $eva->title = $request->title;
+        $eva->evaluation = $request->evaluation;
+        $eva->detail = $request->detail;
+        $eva->teacher = $request->teacher;
+        $eva->save();
+        return redirect(route("evaluations.index"));
+    }
 }

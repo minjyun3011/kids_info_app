@@ -18,6 +18,7 @@
             <li><a href="{{ route('evaluations.show', $eva) }}">{{ $eva->category }}</a></li>
         @endforeach
     </ul>
+    <a href="{{ route('evaluations.create') }}">新規作成</a>
 
 
 </body>
